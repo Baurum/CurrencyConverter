@@ -13,10 +13,11 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/et_user_value"
+            android:id="@+id/et_user_money"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
+            android:inputType="numberDecimal"
 
             />
 
@@ -24,24 +25,25 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="0.3"
+        android:onClick="getData"
 
            />
 
     </LinearLayout>
 
-    <TextView android:id="@+id/usd"
+    <TextView android:id="@+id/tv_usd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="viewStart"
         android:layout_margin="10dp"/>
 
-    <TextView android:id="@+id/pln"
+    <TextView android:id="@+id/tv_pln"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="viewStart"
         android:layout_margin="10dp"/>
 
-    <TextView android:id="@+id/gbp"
+    <TextView android:id="@+id/tv_gbp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="viewStart"
