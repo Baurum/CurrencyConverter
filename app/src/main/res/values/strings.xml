@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Converter</string>
+    <string-array name="user_currency">
+        <item>USD</item>
+        <item>PLN</item>
+        <item>GBP</item>
+        <item>EUR</item>
+    </string-array>
+    <string name="btn_converter">Converter</string>
+
+
+
 </resources>
