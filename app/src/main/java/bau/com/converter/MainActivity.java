@@ -120,14 +120,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     *
+    /***********************************************************************************************
+     * Method
      * @param view
-     */
+     **********************************************************************************************/
     public void getData(View view){
 
         if(etUserMoney.getText().toString().equals("")){
-            etUserMoney.setError("topo mete un numero");
+            etUserMoney.setError("Write a number");
         }else {
             userValue = Double.parseDouble(etUserMoney.getText().toString());
             new DownloadCurrencyTask().execute();
@@ -135,9 +135,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
+    /***********************************************************************************************
      * method
-     */
+     **********************************************************************************************/
     public void refreshCurrencyFields(){
         tvEur.setVisibility(View.VISIBLE);
         tvUsd.setVisibility(View.VISIBLE);
@@ -168,9 +168,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /**
+    /***********************************************************************************************
      *
-     */
+     **********************************************************************************************/
     private class DownloadCurrencyTask extends AsyncTask<Void, Void, String> {
         private String getUrl(){
             String result = "https://api.fixer.io/latest?";
@@ -190,6 +190,11 @@ public class MainActivity extends AppCompatActivity {
             return result;
         }
 
+        /*******************************************************************************************
+         *
+         * @param params
+         * @return
+         ******************************************************************************************/
 
         protected String doInBackground(Void... params) {
             String result = "";
@@ -226,18 +231,18 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        /**
+        /*******************************************************************************************
          *
          * @param progress
-         */
+         ******************************************************************************************/
         protected void onProgressUpdate(Integer... progress) {
 //            etProgressPercent(progress[0]);
         }
 
-        /**
+        /*******************************************************************************************
          *
          * @param result
-         */
+         ******************************************************************************************/
         protected void onPostExecute(String result) {
 
             Log.d(TAG, result);
@@ -264,9 +269,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
+    /***********************************************************************************************
      *
-     */
+     **********************************************************************************************/
     private void multiplyCurrency(){
 
         tvEur.setText("EUR " + String.valueOf(userValue * eur));
